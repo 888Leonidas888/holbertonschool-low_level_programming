@@ -23,7 +23,7 @@ int main(void)
 	else if (last_n < 6 && last_n != 0)
 		printf("%s %d is %d and is less than 6 and not 0\n", STR_LAST, n, last_n);
 	else
-		printf("%s %d is %d and is greater then 5\n", STR_LAST, n, last_n);
+		printf("%s %d is %d and is greater than 5\n", STR_LAST, n, last_n);
 	getchar();
 	return (0);
 }
