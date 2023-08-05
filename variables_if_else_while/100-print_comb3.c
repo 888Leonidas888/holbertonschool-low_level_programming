@@ -10,7 +10,7 @@ int main(void)
 {
 	const int COMMA = 44;
 	const int SPACE_BLANK = 32;
-	const int LF = 13;
+	const int LF = 10;
 	int zero = 48;
 	int nine = 57;
 	int d1;
