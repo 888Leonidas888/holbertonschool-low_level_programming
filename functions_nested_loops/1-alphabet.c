@@ -1,12 +1,19 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * print_alphabet - print alphabet in lowercase to stdout
  *
- * Return: Always 0.
+ * Return: void
  */
-int main(void)
+
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+	int start = 97;
+
+	while (start <= 122)
+	{
+		_putchar(start);
+		start++;
+	}
+	_putchar('\n');
 }
