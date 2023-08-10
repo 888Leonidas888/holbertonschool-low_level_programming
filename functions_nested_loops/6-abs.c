@@ -3,7 +3,7 @@
 
 /**
  * _abs -  Return the value absolute.
- * @int: Recive a number.
+ * @n: Recive a number.
  *
  * Return: Is returned value abs.
  */
