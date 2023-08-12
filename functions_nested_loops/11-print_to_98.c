@@ -19,8 +19,8 @@ void print_to_98(int n)
 
 			if (i != 98)
 			{
-				putchar(32);
 				putchar(44);
+				putchar(32);
 			}
 		}
 	}
@@ -31,8 +31,8 @@ void print_to_98(int n)
 
 		if (i != 98)
 		{
-			putchar(32);
 			putchar(44);
+			putchar(32);
 		}
 	}
 	putchar('\n');
