@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * times_table - print in stdout the multiplication table up to 9.
  *
@@ -10,8 +9,7 @@ void times_table(void)
 	const int COMMA = 44;
 	const int SPACE_EMPTY = 32;
 	int table_times = 0;
-	int result, unit, ten;
-	int d, i;
+	int result, unit, ten, d, i;
 
 	for (d = 0; d <= 9; d++)
 	{
