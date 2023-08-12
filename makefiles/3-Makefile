@@ -6,7 +6,7 @@ RM=rm -f
 all:$(OBJ)	
 	$(CC) $(OBJ) -o $(NAME)
 clean:
-	$(RM) ~ *.swp $(NAME)
+	$(RM) *~ .swp $(NAME)
 oclean:
 	$(RM) $(OBJ)
 fclean:clean oclean
