@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_liner - Print in stdout a line.
+ * print_line - Print in stdout a line.
  * @n: integer, print times the sign _
  *
  * Return: void
