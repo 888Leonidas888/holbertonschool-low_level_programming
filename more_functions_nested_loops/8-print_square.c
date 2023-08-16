@@ -17,7 +17,7 @@ void print_square(int size)
 		for (i = 1; i <= size; i++)
 		{
 			for (o = 1; o <= size; o++)
-					_putchar(MICHI);
+				_putchar(MICHI);
 			_putchar(NEW_LINE);
 		}
 	} else
