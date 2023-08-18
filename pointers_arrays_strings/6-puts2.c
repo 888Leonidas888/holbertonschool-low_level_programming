@@ -12,15 +12,19 @@ void puts2(char *str)
 	int o = 1;
 	const int NEW_LINE = 10;
 
-	i = strlen(str) - 1;
+	i = strlen(str);
 
-	putchar(str[0]);
-
-	while (o <= i)
+	if (i != 0)
 	{
-		if (o % 2 == 0)
-			putchar(str[o]);
-		o++;
+		i--;
+		putchar(str[0]);
+
+		while (o <= i)
+		{
+			if (o % 2 == 0)
+				putchar(str[o]);
+			o++;
+		}
 	}
 	putchar(NEW_LINE);
 }
