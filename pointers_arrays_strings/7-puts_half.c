@@ -8,11 +8,11 @@
  */
 void puts_half(char *str)
 {
-	int len, start;
+	long len, start;
 	const int NEW_LINE = 10;
 
 	len = strlen(str);
-	
+
 	if (len != 0)
 	{
 		if (len % 2 == 0)
@@ -22,7 +22,7 @@ void puts_half(char *str)
 
 		len--;
 
-		while ( start <= len)
+		while (start <= len)
 		{
 			putchar(str[start]);
 			start++;
