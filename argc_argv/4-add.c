@@ -6,7 +6,7 @@
 /**
  * main - Entry point, print the sum of its args.
  * @argc: Numbers of args.
- * @argv. Args to sum.
+ * @argv: Args to sum.
  *
  * Return: Succes 0, 1 Error.
  */
