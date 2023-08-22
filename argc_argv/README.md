@@ -4,7 +4,7 @@ Argc - Argv
 
 Estas codeando en <b>lenguaje C</b>, pero tienes un programa que necesita recibir argumentos através de la línea de comandos. Cómo es esto?, lo mas seguro que has usado el comando `cat ` en la  <b>shell bash</b> para mostrar el contenido de un archivo, algo como esto `cat myFile` . `cat` es un programa que recibe  argumentos y luego trabaja con ellos.
 
-Hasta el momento hemos trabajado con un prototipo como el siguiente `int main(void)`, en nuestro main para hacer nuestros programas, ahora haremos una modificación para que reciba argumentos y podamos trabajar con ellos, el prototipo, firma o declaración será esta `int main(int argc, char const *argv[])`.
+Hasta el momento hemos trabajado con un prototipo como el siguiente `int main(void)`, en nuestro main para hacer nuestros programas, ahora haremos una modificación para que reciba argumentos y podamos trabajar con ellos, el prototipo, firma o declaración será esta <pre>`int main(int argc, char const *argv[])`</pre>.
 
 ## Argc:
 Este parámetro indica la cantidad de argumentos. La cantidad de argumentos que le hemos pasado a nuestro programa cuando lo llamemos, un detalle a tener en cuenta es que la llamada en sí a nuestro programa también cuenta como argumento y será el primer argumento.
