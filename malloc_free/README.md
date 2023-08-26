@@ -1,4 +1,4 @@
-<h1 style = "text-align:center">Malloc - Free</h1>
+<h1 style="text-align:center">Malloc - Free</h1>
 
 # Necesito mas memoria... qué hago?
 
