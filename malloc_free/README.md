@@ -1,6 +1,6 @@
-# Necesito mas memoria... qué hago?
+<h1 style = "text-align: center">Malloc - Free</h1>
 
-# Malloc - Free
+# Necesito mas memoria... qué hago?
 
 En las siguientes líneas interaré explicar de manera corta y precisa estos 2 conceptos sin tener que llegar al tecnisismo que es valido pero sí estas empezando puede resultar algo complejo.
 
