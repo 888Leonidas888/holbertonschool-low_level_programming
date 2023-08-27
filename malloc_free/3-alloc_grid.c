@@ -20,17 +20,17 @@ int **alloc_grid(int width, int height)
 	if (array2D == NULL)
 		return (NULL);
 
-	for (rows = 0; rows < width; rows++)
+	for (rows = 0; rows < height; rows++)
 	{
-		array2D[rows] = (int *)malloc(sizeof(int) * height);
+		array2D[rows] = (int *)malloc(sizeof(int) * width);
 
 		if (array2D[rows] == NULL)
 			return (NULL);
 	}
 
-	for (rows = 0; rows < width; rows++)
+	for (rows = 0; rows < height; rows++)
 	{
-		for (column = 0; column < height; column++)
+		for (column = 0; column < width; column++)
 			array2D[rows][column] = 0;
 	}
 
