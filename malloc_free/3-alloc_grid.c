@@ -11,6 +11,7 @@ int **alloc_grid(int width, int height)
 {
 	int rows, column;
 	int **array2D;
+	int o;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
@@ -26,6 +27,8 @@ int **alloc_grid(int width, int height)
 
 		if (array2D[rows] == NULL)
 		{
+			for (o = 0; o < rows; o++)
+				free(array2D[o]);
 			free(array2D);
 			return (NULL);
 		}
