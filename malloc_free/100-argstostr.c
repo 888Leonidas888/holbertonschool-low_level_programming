@@ -26,6 +26,8 @@ char *argstostr(int ac, char **av)
 		maxLen++;
 	}
 
+	maxLen++;
+	
 	ptr = (char *)malloc(sizeof(char) * maxLen);
 
 	if (ptr == NULL)
@@ -42,7 +44,13 @@ char *argstostr(int ac, char **av)
 			ptr[u] = av[i][o];
 			u++;
 		}
-		ptr[u] = '\n';
+
+		if (i == ac - 1)
+		{
+			ptr[u] = '\n';
+			ptr[u + 1] = '\0';
+		} else			
+			ptr[u] = '\n';
 		u++;
 
 	}
