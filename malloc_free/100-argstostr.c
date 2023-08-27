@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * argstostr - This function concatc all the args.
  * @ac: Number of args received.
@@ -10,8 +9,7 @@
 char *argstostr(int ac, char **av)
 {
 	char *ptr;
-	int i, o, u;
-	int lenArgs;
+	int i, o, u, lenArgs;
 	int maxLen = 0;
 
 	if (ac == 0)
@@ -21,13 +19,10 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 
 	for (i = 0; i < ac; i++)
-	{
-		maxLen += strlen(av[i]);
-		maxLen++;
-	}
+		maxLen += strlen(av[i]) + 1;
 
 	maxLen++;
-	
+
 	ptr = (char *)malloc(sizeof(char) * maxLen);
 
 	if (ptr == NULL)
@@ -45,15 +40,11 @@ char *argstostr(int ac, char **av)
 			u++;
 		}
 
+		ptr[u] = '\n';
+
 		if (i == ac - 1)
-		{
-			ptr[u] = '\n';
 			ptr[u + 1] = '\0';
-		} else			
-			ptr[u] = '\n';
 		u++;
-
 	}
-
 	return (ptr);
 }
