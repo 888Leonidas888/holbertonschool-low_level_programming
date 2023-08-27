@@ -46,6 +46,6 @@ char *argstostr(int ac, char **av)
 		u++;
 
 	}
-	
+
 	return (ptr);
 }
