@@ -97,3 +97,7 @@ Esta función retorna un array de 2 dimensiones inicializado con el valor 0.
 
 Esta función se encarga de liberar la memoria de un array de 2 dimensiones.
 
+- [100-argstostr.c](./100-argstostr.c "100-argstostr.c")
+
+Esta función concatena los argumentos que se le pasen seguido de un salto de línea.
+
