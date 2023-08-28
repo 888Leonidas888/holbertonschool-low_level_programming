@@ -1,7 +1,12 @@
 #ifndef DOG_H
 #define DOG_H
 
-/* dog - Structut for created a dog.*/
+/**
+ * struct dog - Structut for created a dog.
+ *@name: Name of dog.
+ *@age: Age of dog.
+ *@owner: Owner of dog.
+ */
 typedef struct dog
 {
 	char *name;
