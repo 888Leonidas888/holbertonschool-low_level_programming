@@ -1,4 +1,4 @@
-p#include "dog.h"
+#include "dog.h"
 
 /**
  * free_dog - Clean memory.
