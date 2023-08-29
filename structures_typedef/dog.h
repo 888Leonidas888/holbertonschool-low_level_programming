@@ -2,8 +2,8 @@
 #define DOG_H
 
 #include <stddef.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * struct dog - Structut for created a dog.
