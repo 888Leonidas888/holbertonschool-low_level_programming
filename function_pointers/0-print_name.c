@@ -15,6 +15,6 @@ void print_name(char *name, void (*f)(char *))
 
 		putchar(10);
 
-		f(name);
+		(*f)(name);
 	}
 }
