@@ -9,9 +9,10 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	f = &print_name_uppercase;
+	if (f != NULL)
+		f = print_name_uppercase;
 
-	putchar(10);
+		putchar(10);
 
-	f(name);
+		f(name);
 }
