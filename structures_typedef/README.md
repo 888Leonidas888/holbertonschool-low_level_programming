@@ -9,7 +9,7 @@ Tampoco es que creemos nuevos tipos de datos desde cero, solo vamos reasignar al
 # Struct
 
 Usaremos la instrucción `struct` para crear nuevas estructuras que agruparán variables llamadas <b>campos</b>, estas variables guardan una extrecha relación entre sí. Usarmos de ejemplo `struct coche` y usaremos variables para asignar y leer sus valores, antes de pasar primero veremos que existen 3 formas de declaración para las structuras, son las siguientes:
-###Forma 1
+### Forma 1
 
 ```c
     struct coche
@@ -27,9 +27,9 @@ Usaremos la instrucción `struct` para crear nuevas estructuras que agruparán v
     	return (0);
     }
 	
-	```
+```
 
-###Forma 2
+### Forma 2
 ```c
 typedef struct coche
 {
@@ -45,7 +45,7 @@ int main(void)
     return (0);
 }
 ```
-###Forma 3
+### Forma 3
 ```c
 struct coche
 {
@@ -97,7 +97,7 @@ int main(void)
 ```
 Al leer el código es notorio que estamos hablando de un coche, hemos usado la declaración `struct` para poder <b>agrupar varias variables bajo un mismo contexto</b> , hacerlo de esta forma da mayor control del código, legibilidad y mantención. Tambien hay algo mas que mencionar, las estructuras se pueden anidar sí fueran necesario. Veamos el siguiente código:
 
-##Typedef
+### Typedef
 
 En los ejemplos anteriores hemos usado en algunos casos la intrucción `typedef` para declarar nuestras `struct`. Bueno `typedef` lo que hace asignar un alias a los tipos de datos simples como un `char`,`int` ,etc o también tipos de datos compuestos como las `struct` que agrupan otras variables de otros tipos de datos. Veamos lo siguiente.
 
