@@ -20,6 +20,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (d == NULL)
 		return (NULL);
 
+	if (name == NULL || owner == NULL)
+		return (NULL);
+
 	lenName = strlen(name);
 	lenOwner = strlen(owner);
 
@@ -37,6 +40,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (new_owner == NULL)
 	{
+		free(new_name);
 		free(d);
 		return (NULL);
 	}
