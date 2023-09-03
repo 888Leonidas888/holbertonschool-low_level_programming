@@ -1,54 +1,47 @@
 #include "dog.h"
 /**
- * new_dog - Initialize a struct dog_t.
- * @name:  Name
- * @age: Age
- * @owner: Owner
- *
- * Return: Pointer a struct of type dog_t, else NULL.
+ * *new_dog - function to print second dog data
+ * @name: second dog name
+ * @age: second dog age
+ * @owner: second dog owner
+ * Return: New dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *d;
-	char *new_name;
-	char *new_owner;
+	dog_t *mem;
+	int n = 0;
+	int i = 0;
 
-	int lenName, lenOwner;
-
-	d = (dog_t *)malloc(sizeof(dog_t));
-
-	if (d == NULL)
+	mem = malloc(sizeof(dog_t));
+	if (mem == NULL)
 		return (NULL);
-
-	if (name == NULL || owner == NULL)
-		return (NULL);
-
-	lenName = strlen(name);
-	lenOwner = strlen(owner);
-
-	new_name = (char *)malloc(sizeof(char) * lenName);
-
-	if (new_name == NULL)
+	while (name[n] != '\0')
+		n++;
+	while (owner[i] != '\0')
+		i++;
+	mem->name = malloc((n + 1) * sizeof(char));
+	mem->owner = malloc((i + 1) * sizeof(char));
+	if (mem->name == NULL || mem->owner == NULL)
 	{
-		free(d);
+		free(mem->name);
+		free(mem->owner);
+		free(mem);
 		return (NULL);
 	}
-
-	strcpy(new_name, name);
-
-	new_owner = (char *)malloc(sizeof(char) * lenOwner);
-
-	if (new_owner == NULL)
+	n = 0;
+	i = 0;
+	while (name[n] != '\0')
 	{
-		free(new_name);
-		free(d);
-		return (NULL);
+		mem->name[n] = name[n];
+		n++;
 	}
-	strcpy(new_owner, owner);
-
-	(*d).name = new_name;
-	(*d).age = age;
-	(*d).owner = new_owner;
-
-	return (d);
+	while (owner[i] != '\0')
+	{
+		mem->owner[i] = owner[i];
+		i++;
+	}
+	mem->name[n] = '\0';
+	mem->owner[i] = '\0';
+	mem->age = age;
+	return (mem);
 }
