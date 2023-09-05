@@ -13,7 +13,7 @@ void print_all(const char * const format, ...)
 	unsigned int n = 3;
 	char *str;
 
-	va_start = (listAll, n);
+	va_start(listAll, n);
 
 	for (i = 0; i < n; i++)
 	{
