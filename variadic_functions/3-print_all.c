@@ -10,16 +10,17 @@ void print_all(const char * const format, ...)
 {
 	va_list listAll;
 	int i;
+	unsigned int n = 3;
 	char *str;
 
-	va_start = (listAll, 3);
+	va_start = (listAll, n);
 
-	for (i = 0; i < 3; i++)
+	for (i = 0; i < n; i++)
 	{
 		str = va_arg(listAll, char *);
 
 		if (str == NULL)
-			str == "(nil)";
+			str = "(nil)";
 
 		if (i == 2)
 			printf("%s", str);
