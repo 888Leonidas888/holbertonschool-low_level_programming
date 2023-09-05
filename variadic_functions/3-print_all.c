@@ -9,7 +9,7 @@
 void print_all(const char * const format, ...)
 {
 	va_list listAll;
-	int i;
+	unsigned int i;
 	unsigned int n = 3;
 	char *str;
 
@@ -27,6 +27,6 @@ void print_all(const char * const format, ...)
 		else
 			printf("%s ,", str);
 	}
-	puts(10);
+	putchar(10);
 	va_end(listAll);
 }
