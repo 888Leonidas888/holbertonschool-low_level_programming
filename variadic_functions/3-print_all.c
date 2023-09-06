@@ -41,9 +41,6 @@ void print_all(const char * const format, ...)
 			case 's':
 				c = va_arg(listAll, char *);
 				
-				if (c == NULL)
-					c = "(nil)";
-				
 				printf("%s", c);
 				o = 1;
 				break;
