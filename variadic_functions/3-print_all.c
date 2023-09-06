@@ -13,17 +13,17 @@ void print_all(const char * const format, ...)
 	int type;
 	char *c;
 	int o;
-	
+
 	va_start(listAll, format);
-	
+
 	if (format == NULL || listAll == NULL)
 		return;
-	
+
 	while (format[i] != '\0')
 	{
 		type = format[i];
 		o = 0;
-		
+
 		switch (type)
 		{
 			case 'c':
@@ -40,15 +40,14 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				c = va_arg(listAll, char *);
-				
+
 				printf("%s", c);
 				o = 1;
 				break;
 			default:
 				break;
 		}
-	
-	
+
 		if (format[i + 1] != '\0' && o == 1)
 			printf("%s", ", ");
 		i++;
