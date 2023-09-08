@@ -1,5 +1,4 @@
 #include "variadic_functions.h"
-
 /**
  * print_all - This function print all.
  * @format: Is a list of types de args passed.
@@ -9,7 +8,7 @@
 void print_all(const char * const format, ...)
 {
 	va_list listAll;
-	int i = 0; 
+	int i = 0;
 	int a = 0;
 	int type, o;
 	char *c;
