@@ -38,7 +38,7 @@ void print_all(const char * const format, ...)
 				default:
 					i++;
 					continue;
-			}	
+			}
 			if (format[i + 1] != '\0')
 				printf("%s", ", ");
 			i++;
