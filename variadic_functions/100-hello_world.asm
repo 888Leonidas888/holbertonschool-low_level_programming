@@ -1,19 +1,16 @@
 section .text
-	global _start
-_start:
+	global main
 
-	mov rax, 1
-	mov rdi, 1
-	lea rsi, [hello]
-	mov rdx, 14
+main:
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, jhony
+	mov edx, 13
+	int 0x80
 
-	syscall
-
-	mov rax, 60
-	xor rdi, rdi
-
-	syscall
+	mov eax, 1
+	int 0x80
 
 section .data
 
-	hello db "Hello world!", 10
+	jhony db 72, 101, 108, 108, 111, 44, 32, 87, 111, 114, 108, 100, 10
