@@ -9,19 +9,31 @@
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2;
+	int num1, num2, result, i;
 	char *operator;
-	
+	char *s = "+-*/%";
+
 	operator = argv[2];
 
 	if (argc != 4)
 	{
-		puts("Error\n");
+		puts("Error");
 		return (98);
 	}
+	
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if (s[i] == *operator)
+		{
+			num1 = atoi(argv[1]);
+			num2 = atoi(argv[3]);
 
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[3]);
+			result = (*get_op_func(operator))(num1, num2);
 
-	return (printf("%d\n", (*get_op_func(operator))(num1, num2)));
+			return (printf("%d\n", result));
+		}
+	}
+
+	puts("Error");
+	return (99);
 }
