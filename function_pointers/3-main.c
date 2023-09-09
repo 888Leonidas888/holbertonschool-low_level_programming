@@ -9,9 +9,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2, result, i;
+	int num1, num2, result;
 	char *operator;
-	char *s = "+-*/%";
 
 	operator = argv[2];
 
@@ -21,19 +20,28 @@ int main(int argc, char *argv[])
 		return (98);
 	}
 	
-	for (i = 0; s[i] != '\0'; i++)
+	switch (*operator)
 	{
-		if (s[i] == *operator)
-		{
-			num1 = atoi(argv[1]);
-			num2 = atoi(argv[3]);
-
-			result = (*get_op_func(operator))(num1, num2);
-
-			return (printf("%d\n", result));
-		}
+		case '+':
+			break;
+		case '-':
+			break;
+		case '*':
+			break;
+		case '/':
+			break;
+		case '%':
+			break;
+		default:
+			puts("Error");
+			return (99);
 	}
 
-	puts("Error");
-	return (99);
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
+
+	result = (*get_op_func(operator))(num1, num2);
+
+	return (printf("%d\n", result));
+
 }
