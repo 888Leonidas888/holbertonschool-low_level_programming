@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 		puts("Error");
 		return (98);
 	}
-	
+
 	switch (*operator)
 	{
 		case '+':
@@ -36,11 +36,11 @@ int main(int argc, char *argv[])
 			puts("Error");
 			return (99);
 	}
-	
+
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 
-	if (num2 == 0 && (*operator == '%' || *operator == '/' ))
+	if (num2 == 0 && *operator == '%' || *operator == '/')
 	{
 		puts("Error");
 		return (100);
