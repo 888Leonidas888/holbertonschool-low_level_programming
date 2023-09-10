@@ -10,13 +10,18 @@
 char *_strcpy(char *dest, char *src)
 {
 	int lenTxt;
+	int i;
 
 	lenTxt = strlen(src);
-	
+
 	dest = (char *)malloc(sizeof(char) * lenTxt);
-	
-	strcpy(dest, src);
+
+	for (i = 0; src[i] = '\0'; i++)
+	{
+		dest[i] = src[i];
+	}
+
 	dest[lenTxt] = '\0';
-	
+
 	return (dest);
 }
