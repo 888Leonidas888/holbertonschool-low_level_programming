@@ -14,6 +14,7 @@ char *_strcpy(char *dest, char *src)
 
 	lenTxt = strlen(src);
 
+	free(dest);
 	dest = (char *)malloc(sizeof(char) * lenTxt);
 
 	for (i = 0; src[i] != '\0'; i++)
