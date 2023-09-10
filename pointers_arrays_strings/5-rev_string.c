@@ -8,18 +8,24 @@
  */
 void rev_string(char *s)
 {
-	int i;
-	int o = 0;
-	char tempArray[50];
+	char *buffer;
+	int lenTxt, lenTmp, i;
+	
+	lenTxt = strlen(s);
+	
+	buffer = (char *)malloc(sizeof(char) * lenTxt);
+	
+	strcpy(buffer, s);
+	buffer[lenTxt] = '\0';
 
-	i = strlen(s) - 1;
-
-
-	strcpy(tempArray, s);
-	while (i >= 0)
+	lenTmp = lenTxt - 1;
+	
+	for (i = 0; buffer[i] != '\0'; i++)
 	{
-		s[o] = tempArray[i];
-		i--;
-		o++;
+		s[lenTmp] = buffer[i];
+		lenTmp--;
 	}
+	
+	free(buffer);
+	s[lenTxt] = '\0';
 }
