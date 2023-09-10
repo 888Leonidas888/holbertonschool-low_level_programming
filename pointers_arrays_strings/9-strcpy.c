@@ -9,7 +9,14 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	char *ptr;
-	ptr = strcpy(dest, src);
-	return (ptr);
+	int lenTxt;
+
+	lenTxt = strlen(src);
+	
+	dest = (char *)malloc(sizeof(char) * lenTxt);
+	
+	strcpy(dest, src);
+	dest[lenTxt] = '\0';
+	
+	return (dest);
 }
