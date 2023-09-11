@@ -1,6 +1,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * main - This program print is opcode.
+ * @argc: Numbers of args, only two args accept.
+ * @argv: Numbers bytes to print.
+ *
+ * Return: Sucess 0, otherwhise number.
+ */
 int main(int argc, char *argv[])
 {
 	if (argc != 2)
