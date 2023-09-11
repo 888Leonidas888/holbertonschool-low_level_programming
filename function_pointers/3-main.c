@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 		return (99);
 	}
 
-	if (num2 == 0 && operator == '/' || operator == '%')
+	if (num2 == 0 && (*operator == '/' || *operator == '%'))
 	{
 		puts("Error");
 		return (100);
