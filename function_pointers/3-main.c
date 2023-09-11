@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	if (get_op_func(operator) == NULL)
 	{
 		puts("Error");
-		return (100);
+		return (99);
 	}
 
 	result = (*get_op_func(operator))(num1, num2);
