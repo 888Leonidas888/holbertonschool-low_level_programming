@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
 {
 	char *ptr = (char *)main;
 	int lenByte = 0;
+	int i;
 
 	if (argc != 2)
 	{
@@ -26,7 +27,7 @@ int main(int argc, char *argv[])
 		return (2);
 	}
 
-	for (int i = 0; i < lenByte; i++)
+	for (i = 0; i < lenByte; i++)
 	{
 		printf("%02x ", ptr[i]);
 	}
