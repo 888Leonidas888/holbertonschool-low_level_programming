@@ -12,35 +12,18 @@ int main(int argc, char *argv[])
 	int num1, num2, result;
 	char *operator;
 
-	operator = argv[2];
-
 	if (argc != 4)
 	{
 		puts("Error");
 		return (98);
 	}
 
-	switch (*operator)
-	{
-		case '+':
-			break;
-		case '-':
-			break;
-		case '*':
-			break;
-		case '/':
-			break;
-		case '%':
-			break;
-		default:
-			puts("Error");
-			return (99);
-	}
-
+	operator = argv[2];
+	
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 
-	if (num2 == 0 && (*operator == '%' || *operator == '/'))
+	if (get_op_func(operator) == NULL)
 	{
 		puts("Error");
 		return (100);
