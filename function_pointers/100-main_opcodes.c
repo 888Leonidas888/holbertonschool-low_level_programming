@@ -1,15 +1,5 @@
 #include <stdlib.h>
 #include <stdio.h>
-
-/**
- * function_main - Function of demo
- *
- * Return: void
- */
-void function_main(void)
-{
-}
-
 /**
  * main - This program print is opcode.
  * @argc: Numbers of args, only two args accept.
@@ -19,7 +9,8 @@ void function_main(void)
  */
 int main(int argc, char *argv[])
 {
-	unsigned char *ptr = (unsigned char *)&function_main;
+	char *ptr = (char *)main;
+	int lenByte = 0;
 
 	if (argc != 2)
 	{
@@ -27,15 +18,17 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	if (atoi(argv[1]) < 0)
+	lenByte = atoi(argv[1]);
+
+	if (lenByte < 0)
 	{
 		puts("Error");
 		return (2);
 	}
 
-	for (int i = 0; i < sizeof(function_main; i++))
+	for (int i = 0; i < lenByte; i++)
 	{
-		printf("%02X ", ptr[i]);
+		printf("%02x ", ptr[i]);
 	}
 	putchar(10);
 	return (0);
