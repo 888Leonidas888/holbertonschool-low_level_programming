@@ -19,7 +19,6 @@ int main(int argc, char *argv[])
 	}
 
 	operator = argv[2];
-
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 
