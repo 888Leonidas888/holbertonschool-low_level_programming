@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	}
 
 	operator = argv[2];
-	
+
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 
@@ -29,8 +29,13 @@ int main(int argc, char *argv[])
 		return (99);
 	}
 
+	if (num2 == 0 && operator == '/' || operator == '%')
+	{
+		puts("Error");
+		return (100);
+	}
+
 	result = (*get_op_func(operator))(num1, num2);
 
 	return (printf("%d\n", result));
-
 }
