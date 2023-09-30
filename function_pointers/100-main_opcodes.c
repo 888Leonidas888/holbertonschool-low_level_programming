@@ -29,7 +29,9 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < lenByte; i++)
 	{
-		printf("%02x ", ptr[i]);
+		printf("%02hhx", ptr[i]);
+		if (i < lenByte - 1)
+			putchar(32);
 	}
 	putchar(10);
 	return (0);
